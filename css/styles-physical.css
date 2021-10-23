@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
   font-family: charter;
   src: url('../fonts/charter-regular.otf');
   font-style: normal;
@@ -25,6 +25,19 @@
   font-style: bold;
   font-weight: 400;
 }
+
+
+/* .form {
+  font-size: 0;
+}
+
+input {
+  padding: 10px 50px;
+  width: 50%;
+  box-sizing: border-box;
+  border: 2px solid red;;
+} */
+
 
 :root {
   font-size: 18px;
@@ -69,12 +82,15 @@ h1 {
   /* font-size: 3.75em; */
   margin-top: 64px;
   margin-bottom: 16px;
-
+  /* border: 10px solid red;
+  width: 400px;
+  height: 400px;
+  padding: 40px; */
 }
 
-h1 + p {
-  margin-bottom: 64px;
-}
+/* h1 + p {
+  margin-bottom: 64px; NO HACE FALTA POR EL MARGIN COLLAPSING
+} */
 
 hr {
   margin: 64px 0;
@@ -92,22 +108,83 @@ h3 {
   font-weight: normal;
   margin-top: 16px;
   margin-bottom: 24px;
+  /* width: 200px; */
+  /* border: 1px solid red; */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 pre {
   background: #FEC62E;
+  padding: 40px;
+  font-family: Roboto;
+  line-height: 24px;
 }
 
 blockquote {
   margin: 32px 0;
+  padding-left: 16px;
+  font-size: 24px;
+  line-height: 24px;
+  /* border: 10px solid red;
+  border-top-color: aqua;
+  border-top-style: groove;
+  /* border-radius: 10px; */
+  /* border-radius: 50px 100px 10px 0;*/
+  border-left: 4px solid var(--gray30);
 }
+
+blockquote span {
+  color: var(--gray20);
+}
+
+blockquote span::before {
+  content: '-';
+}
+
+.main {
+  /* background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent ), url(../images/patron-1.png); */
+}
+
+.wrapper {
+  width: 902px;
+  margin: auto;
+}
+
+.main-content {
+  background: white;
+  padding: 20px;
+}
+
+/* .title {
+  background: red;
+}
+
+.services {
+  background: purple;
+}
+
+.pricing {
+  background: blue;
+} */
+
+
+
+/*
+.debug {
+  box-shadow: 0 0 0 50px red;
+  outline: 1px solid red;
+  background: red;
+  border: 1px solid red !important;
+  box-sizing: border-box;
+} */
+
 .hero {
   background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent ), url(../images/patron-1.png);
   height: 350px;
   /* background-repeat: no-repeat;
   background-position: left 50px bottom -50px;
   background-size: cover; */
-
 }
 
 .section-content {
@@ -140,10 +217,11 @@ blockquote {
 
 .section-content h3 {
   counter-increment: titleList;
+  padding-bottom: 4px;
 }
 
 .section-content h3::before {
-  content: counter(titleList);
+  content: counter(titleList) '. ';
 }
 
 .section-content h3::after {
