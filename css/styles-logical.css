@@ -39,6 +39,14 @@ body {
   /* font-family: charter; */
   font-family: 'Nunito', sans-serif;
   background: #251F24;
+  margin: 0;
+  /* margin: 10px 10px 10px 10px; */
+  /* writing-mode: vertical-lr; */
+  /* margin-inline: 100px; */
+  /* margin-block: 0; */
+  /* margin-block-start: ; */
+  /* margin-block-end: ; */
+
 }
 
 a {
@@ -69,20 +77,30 @@ nav details summary {
 }
 
 h1, h2, h3 {
-  font-weight: normal;
+  /* font-weight: normal; */
 }
 
 h1 {
   font-size: 60px;
   /* font-size: 3.75em; */
+  margin-block-start: 64px;
+  margin-block-end: 16px;
 }
 
 h2 {
   font-size: 2em;
+  margin-block: 40px;
 }
 
 h3 {
   font-size: 1.5em;
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+hr {
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2);
 }
 
 pre {
@@ -107,12 +125,18 @@ p {
   counter-reset: titleList;
 }
 
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
+  /* margin-block-end: 16px; */
+}
+
 .section-content h3 {
   counter-increment: titleList;
 }
 
 .section-content h3::before {
-  content: counter(titleList);
+  content: counter(titleList, decimal)'. ';
 }
 
 .section-content h3::after {
@@ -121,6 +145,17 @@ p {
   height: 4px;
   background: var(--white30);
   display: inline-block;
+}
+
+blockquote {
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background-color: var(--white10);
+  border-radius: 8px;
+}
+
+.main hr {
+  display: none;
 }
 
 
