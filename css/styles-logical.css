@@ -53,14 +53,45 @@ a {
   color: var(--white30);
 }
 
+.header {
+  position: sticky;
+  inset-block-start: -45px;
+  /* background-color: red;
+  position: fixed; */
+  /* inset: 50px; */
+  /* inset-inline: 50px; */
+  /* inset-block: 50px; */
+  /* block-size: 500px; */
+  /* inline-size: 500px; */
+}
+
+.header-content {
+  position: relative;
+  /* border: 1px solid red; */
+  /* background-color: red; */
+  inset-block-start: 65px;
+  /* inset-inline: 40px; */
+}
 header {
   /* --white10: red; */
   font-size: 14px;
   color: var(--white);
+  position: absolute;
+  /* top */
+  inset-block-start: 0px;
+  /* bottom */
+  /* inset-block-end: ; */
+  /* left */
+  inset-inline-start: -208px; /*20px más que el inline size*/
+  /* right */
+  /* inset-inline-end:   ; */
+  inline-size: 188px;
+  /* inset:0; */
 }
 
 header li {
   color: var(--white20);
+  margin-block-end: 16px;
 }
 
 header a {
@@ -85,7 +116,7 @@ h1 {
   /* font-size: 3.75em; */
   margin-block-start: 64px;
   margin-block-end: 16px;
-  /* text-align: start; */
+  /* text-align: center; */
 }
 
 h2 {
