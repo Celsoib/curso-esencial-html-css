@@ -110,6 +110,20 @@ pre {
   /* overflow: hidden; */
   overflow: auto; /*con esto crea un scroll horizontal pero dentro de la caja de pre*/
   border-radius: 8px;
+  border: 10px solid red;
+  border-left: 5px solid blue;
+  border-inline-start: 5px solid white;
+  border-block-start: 20px solid pink;
+  border-block-end: 20px solid red;
+  border-inline-end: 20px solid green;
+  border-block-start-color: blue;
+  border: 10px solid #5551FF;
+  box-shadow: -10px 10px 0 0 #ABAAF6;
+  /* margin-block-end: 40px; */
+  /* border-radius: 50%; */
+  /* inline-size: 400px; */
+  /* block-size: 400px; */
+  /* border-inline-start-radius: 60px; */
 }
 
 p {
