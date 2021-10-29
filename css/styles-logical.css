@@ -54,8 +54,8 @@ a {
 }
 
 .header {
-  position: sticky;
-  inset-block-start: -45px;
+  /* position: sticky;
+  inset-block-start: -45px; */
   /* background-color: red;
   position: fixed; */
   /* inset: 50px; */
@@ -66,26 +66,28 @@ a {
 }
 
 .header-content {
-  position: relative;
+  padding-inline: 20px;
+  /* position: relative; */
   /* border: 1px solid red; */
   /* background-color: red; */
-  inset-block-start: 65px;
+  /* inset-block-start: 65px; */
   /* inset-inline: 40px; */
 }
 header {
+  margin-block-start: 20px;
   /* --white10: red; */
   font-size: 14px;
   color: var(--white);
-  position: absolute;
+  /* position: absolute; */
   /* top */
-  inset-block-start: 0px;
+  /* inset-block-start: 0px; */
   /* bottom */
   /* inset-block-end: ; */
   /* left */
-  inset-inline-start: -208px; /*20px más que el inline size*/
+  /* inset-inline-start: -208px; 20px más que el inline size */
   /* right */
   /* inset-inline-end:   ; */
-  inline-size: 188px;
+  /* inline-size: 188px; */
   /* inset:0; */
 }
 
@@ -112,9 +114,9 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 40px;
   /* font-size: 3.75em; */
-  margin-block-start: 64px;
+  margin-block-start: 20px;
   margin-block-end: 16px;
   /* text-align: center; */
 }
@@ -164,7 +166,7 @@ p {
 .hero {
   /* background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent ), url(../images/patron-1.png); */
   background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
-  height: 350px;
+  block-size: 50px;
   /* background-repeat: no-repeat;
   background-position: left 50px bottom -50px;
   background-size: cover; */
@@ -300,7 +302,34 @@ blockquote p {
   color: var(--white20);
 }
 
+@media screen and (min-width: 1366px) {
+  .hero {
+    block-size: 350px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+  }
 
+  .header-content {
+    position: relative;
+    inset-block-start: 65px;
+    padding-inline: 0;
+  }
+
+  header {
+    position: absolute;
+    inset-block-start: 0px;
+    inset-inline-start: -208px;
+    inline-size: 188px;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
+
+}
 
 
 
